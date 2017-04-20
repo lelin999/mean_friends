@@ -1,0 +1,12 @@
+<div ng-controller="DeleteController">
+	<p>DO YOU WANT TO DELETE THIS!?!</p>
+	<table>
+		<tr>
+			<th>{{friend.first_name}}</th>
+			<th>{{friend.last_name}}</th>
+			<th>{{friend.birthday | date: dd/MM/YYYY}}</th>
+		</tr>
+	</table>
+	<button ng-click="delete(friend._id)">YES</button>
+	<button ng-click="redirect()">No</button>
+</div>

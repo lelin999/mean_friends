@@ -1,0 +1,14 @@
+<div ng-controller="NewController">
+	<div ng-if="errormessage">
+			{{errormessage}}
+	</div>
+	<form ng-submit="create()" method="post">
+		<input type="text" ng-model="new_friend.first_name">
+		<label>First Name</label><br>
+		<input type="text" ng-model="new_friend.last_name">
+		<label>Last Name</label><br>
+		<input type="date" ng-model="new_friend.birthday">
+		<label>Birthday</label><br>
+		<input type="submit" value="Create">
+	</form>
+</div>

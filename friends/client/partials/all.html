@@ -1,0 +1,22 @@
+<div ng-controller="IndexController">
+	<div ng-if="errormessage">
+		{{errormessage}}
+	</div>
+	<label>Filter: </label>
+	<input type="text" ng-model="filter_bar">
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Show</th>
+			<th>Update</th>
+			<th>Delete</th>
+		</tr>
+		<tr ng-repeat='friend in friends'>
+			<td>{{friend.first_name + " " + friend.last_name}}</td>
+			<td><a href='#!/show/{{friend._id}}'>show</a></td>
+			<td><a href='#!/edit/{{friend._id}}'>edit</a></td>
+			<td><a href='#!/delete/{{friend._id}}'>delete</a></td>
+		</tr>
+	</table>
+	<button ng-click='move_to_new()'>New Friend</button>
+</div>
